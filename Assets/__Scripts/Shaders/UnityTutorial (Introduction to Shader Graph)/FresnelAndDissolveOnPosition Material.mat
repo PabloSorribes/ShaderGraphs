@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FresnelAndDissolveOnPosition Material
+  m_Shader: {fileID: 4800000, guid: f24d7498d87b0834ba63423929c129d9, type: 3}
+  m_ShaderKeywords: BOOLEAN_A5EC738C_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_3DE07D57:
+        m_Texture: {fileID: 2800000, guid: 59c8de363dc14c54986d0751c2c38342, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Boolean_A5EC738C: 1
+    - Vector1_CB3ED3D3: 2
+    - Vector1_D5F5EC71: 98.87
+    - Vector1_F6BE5F64: 0.304
+    m_Colors:
+    - Color_C2D742E5: {r: 1, g: 0.9315852, b: 0.042452775, a: 0}
