@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hologram ShaderGraph_Material
+  m_Shader: {fileID: 4800000, guid: 13ded9e777861584fa58d40bab8c1dc2, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_1B5C0A63:
+        m_Texture: {fileID: 2800000, guid: 7bae9f3d8fb74334ba3889f53fe7eea0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_EA2E3440: 0.1
+    m_Colors:
+    - Color_D7A7AE7: {r: 0.03724634, g: 0.8773585, b: 0.36953107, a: 0}
+    - Vector2_389F5E51: {r: 1, g: 3, b: 0, a: 0}
