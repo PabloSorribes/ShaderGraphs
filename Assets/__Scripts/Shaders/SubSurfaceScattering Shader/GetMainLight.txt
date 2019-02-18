@@ -1,0 +1,19 @@
+void CustomGetMainLight()
+{
+			Light mainLight = GetMainLight();
+			Color = mainLight.color;
+			Direction = mainLight.direction;
+
+			float4 shadowCoord;
+			#ifdef _SHADOWS_ENABLED
+        	#if SHADOWS_SCREEN
+				float4 clipPos = TransformWorldToHClip(WorldPos);
+        		shadowCoord = ComputeShadowCoord(clipPos);
+        	#else
+        		shadowCoord = TransformWorldToShadowCoord(WorldPos);
+        	#endif
+			mainLight.attenuation = MainLightRealtimeShadowAttenuation(shadowCoord);
+        	#endif
+
+			Attenuation = mainLight.attenuation;
+		}";
