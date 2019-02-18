@@ -1,0 +1,5 @@
+Subsurface Scattering for Foliage, in Unity (WITHOUT RAYTRACING!)
+https://www.youtube.com/watch?v=RPkhbjmmvS0
+
+Fast Subsurface Scattering in Unity (Part 1)
+https://www.alanzucconi.com/2017/08/30/fast-subsurface-scattering-1/
