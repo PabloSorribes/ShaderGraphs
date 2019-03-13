@@ -1,21 +1,32 @@
 using UnityEngine;
 
-public class Wobble : MonoBehaviour
+/// <summary>
+/// Script used to feed rotation and position values to the "LiquidShader"-ShaderGraph, based on the (calculated) velocity of an object.
+/// </summary>
+/// <remarks>
+/// Source: https://www.patreon.com/posts/24996282
+/// </remarks>
+public class LiquidShader_WobbleCalculation : MonoBehaviour
 {
-    Renderer rend;
-    Vector3 lastPos;
-    Vector3 velocity;
-    Vector3 lastRot;
-    Vector3 angularVelocity;
-    public float MaxWobble = 0.03f;
+    private Renderer rend;
+    private Vector3 lastPos;
+    private Vector3 velocity;
+    private Vector3 lastRot;
+    private Vector3 angularVelocity;
+
+    public float MaxWobble = 0.05f;
     public float WobbleSpeed = 1f;
     public float Recovery = 1f;
-    float wobbleAmountX;
-    float wobbleAmountZ;
-    float wobbleAmountToAddX;
-    float wobbleAmountToAddZ;
-    float pulse;
-    float time = 0.5f;
+
+    private float wobbleAmountX;
+    private float wobbleAmountZ;
+    private float wobbleAmountToAddX;
+    private float wobbleAmountToAddZ;
+    private float pulse;
+    private float time = 0.5f;
+
+    private readonly string shaderProp_WobbleX = "_WobbleX";
+    private readonly string shaderProp_WobbleZ = "_WobbleZ";
 
     // Use this for initialization
     void Start()
@@ -36,8 +47,8 @@ public class Wobble : MonoBehaviour
         wobbleAmountZ = wobbleAmountToAddZ * Mathf.Sin(pulse * time);
 
         // send it to the shader
-        rend.material.SetFloat("_WobbleX", wobbleAmountX);
-        rend.material.SetFloat("_WobbleZ", wobbleAmountZ);
+        rend.material.SetFloat(shaderProp_WobbleX, wobbleAmountX);
+        rend.material.SetFloat(shaderProp_WobbleZ, wobbleAmountZ);
 
         // velocity
         velocity = (lastPos - transform.position) / Time.deltaTime;
